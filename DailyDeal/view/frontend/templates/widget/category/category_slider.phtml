@@ -1,0 +1,69 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+echo "stringstring";
+$id = $this->getId();
+$css = $this->getCss();
+echo $options = trim($this->getOptions());
+$title = $this->getTitle();
+$categories = $this->getCategories();
+$placeholder = $this->getPlaceholder();
+
+//$categories = $factory->addAttributeToSelect('*')->addFieldToFilter('is_active', 1)->setOrder('position','ASC');
+
+//$categories = $collection->getCategories(2);
+
+$store = $block->getStore();
+
+$om = \Magento\Framework\App\ObjectManager::getInstance();
+$_outputhelper = $om->create('Magento\Catalog\Helper\Output');
+
+$categories = $block->getCategoryCollectionByIds();
+
+?>
+
+<div class="block widget block-catagory">
+    <div class="block-container">
+    <?php if($title != null) :?>
+    <div class="block-title">
+        <strong role="heading" aria-level="2"><?php echo __($title); ?></strong>
+    </div>
+    <?php endif; ?>
+        <div class="block-content">
+            <div class="product-slider category-slider <?php echo $css;?>">
+                <ol id="<?php echo $id;?>" class="product-slider-ul">
+                    <?php foreach ($categories as $category): ?>
+                        <li class="product-slider-li">
+                            <div class="product-slider-li-inner product-item-info">
+                                <a href="<?php echo $category->getUrl() ?>" title="<?php echo $category->getName(); ?>" title="<?php echo $category->getName()?>">
+                                    <div class="product-slider-image-container">
+                                            <?php $img = $category->getImageUrl(); ?>
+                                            <?php $image = $_outputhelper->categoryAttribute($category,$img, 'image'); ?>
+                                            <img class="product-slider-image" src="<?php echo $image; ?>"/>
+                                    </div>
+                                    <div class="product-item-details">
+                                        <p class="product-item-name"><?php echo $category->getName()?></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
+                </ol>
+            </div>
+        </div>
+        </div>
+    </div>
+
+<script type="text/javascript" charset="utf-8">
+    require([
+        'jquery',
+        'owlCarousel'
+    ], function ($) {
+        'use strict';
+        $('#<?php echo $id;?>').owlCarousel(<?php echo $options;?>);
+    });
+</script>
+
+</script>

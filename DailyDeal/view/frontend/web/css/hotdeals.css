@@ -1,0 +1,437 @@
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Widget */
+.comman-hot-deal .block-title,
+.widget.comman-hot-deal .block-title {
+    display: block;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    text-align: left;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0;
+    line-height: normal;
+}
+.comman-hot-deal .block-title,
+.widget.comman-hot-deal .block-title
+{
+    margin-bottom: 30px;
+}
+.comman-hot-deal .block-title strong,
+.widget.comman-hot-deal .block-title strong
+{
+    display: inline-block;
+    border-bottom: 3px solid #1979c3;
+    padding: 0 0 10px 0;
+    margin: 0;
+    line-height: normal;
+    color:#1979c3;
+}
+.comman-hot-deal .block-title > strong,
+.widget.comman-hot-deal .block-title > strong
+{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.comman-hot-deal .grid
+{
+    padding:0 0 30x 0;
+    margin:0 -15px;
+}
+
+.block.widget.hotdeals-product-list .products-grid .product-item.hotdeals-item
+{
+    padding:0 15px 10px 15px;
+    float:left;
+}
+.hotdeals-slider-block .owl-carousel .owl-item
+{
+    padding:0 15px 10px 15px;
+    /* float:left; */
+    box-sizing: border-box;
+}
+
+.block.widget.comman-hot-deal{margin:0 0 15px 0;}
+
+.load-more
+{
+    clear:both;
+    text-align:center;
+    padding:0 15px;
+}
+
+/****
+Counter Css
+****/
+.countdown
+{
+    text-align: center;
+    overflow:hidden;
+
+}
+.hotdeals-slider-block .countdown-section
+{
+    float: left;
+    width:25%;
+    padding:5px;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+.countdown-section span[class]{
+    display: block;
+}
+.countdown-section .countdown-amount{
+    font-weight: bold;
+}
+
+.hotdeals-product-list .product-item .hotdeals-item-li-inner{
+    position: relative;
+    overflow:visible;
+}
+
+.hotdeals-product-list .countdown{
+    /* position: absolute; */
+}
+.hotdeals-item .price-box .price-label{
+    /*display: none;*/
+}
+.hotdeals-item .product-item-details .hot-data
+{
+
+}
+.hotdeals-item .product-item-details .hot-discount .hot-data
+{
+    color:#1979c3;
+    font-weight:700;
+}
+
+.hotdeals-product-list .hotdeals-item .timer,
+.hotdeals-product-list .hotdeals-item .timer .countdown
+{
+    position: absolute;
+    top: 10px;
+    left: -3px;
+    z-index: 999;
+}
+.hotdeals-product-list .hotdeals-item .timer .countdown
+{
+    color:#fff;
+    text-transform:uppercase;
+    font-size:10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+}
+
+.hotdeals-product-list .hotdeals-item .timer .countdown .countdown-section
+{
+    background:#1979c3;
+    display: block;
+    height: auto;
+    line-height: 15px;
+    margin-bottom: 7px;
+    padding: 15% 0;
+    position: relative;
+    text-align: center;
+    width: 55px;
+    border-radius:5px 5px 5px 0;
+    -webkit-border-radius:5px 5px 5px 0;
+}
+.hotdeals-product-list .hotdeals-item .timer .countdown .countdown-section:before
+{
+    border-color:#1979c3 transparent transparent;
+    border-style: solid;
+    border-width: 7px 0 0 6px;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 0;
+}
+
+.countdown-text{font-size: 11px}
+
+.page-layout-1column .block.widget.hotdeals-slider-block .products-grid .product-item.hotdeals-slider-li
+{
+    width: 100%;
+    margin:0;
+}
+.hotdeals-slider-li-inner:after{
+    display: block;
+    content: "";
+    float: none;
+    clear: both;
+}
+.products-grid .product-item-info.hotdeals-slider-li-inner:hover{
+    border:none;
+    box-shadow: none;
+
+    padding: 0;
+    margin: 0;
+}
+.hotdeals-slider-ul .hotdeals-slider-li .product-item-details,
+.hotdeals-slider-ul .hotdeals-slider-li .product-item-photo
+{
+    float:none;
+    display:block;
+}
+.comman-hot-deal .product-image-container
+{
+    display:block;
+    margin:0 auto;
+}
+.comman-hot-deal .product-item-details
+{
+    padding:10px;
+    transition:all 0.3s ease 0.1s;
+    -webkit-transition:all 0.3s ease 0.1s;
+}
+.hotdeals-slider-ul .hotdeals-item .timer, .hotdeals-slider-ul .hotdeals-item .timer .countdown, .hotdeals-slider-ul .hotdeals-item .countdown-section{
+    position: static;
+    /*! border: 1px solid; */
+}
+.hotdeals-slider-ul .hotdeals-item .countdown-section{
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    border:1px solid #333;
+}
+.hotdeals-slider-ul .hotdeals-item .countdown-section + .countdown-section{
+    border-left: none;
+}
+.hotdeals-slider-ul .products-grid .product-item-info:hover{
+    border:none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.block.widget.hotdeals-product-list .products-grid .hotdeals-item-ul{
+    margin:0px;
+}
+.block.widget.hotdeals-product-list .products-grid .product-item.hotdeals-item
+{
+    margin: 0 0 30px 0!important;
+    width: 25%;
+    padding: 0 15px;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+.block.widget.hotdeals-product-list .products-grid > ol:after
+{
+    content:"";
+    display:table;
+    width:100%;
+}
+
+.hotdeals-item .product-reviews-summary .rating-summary{
+    left:0;
+}
+.hotdeals-slider-ul .hotdeals-item .hotdeal-timer
+{
+    padding:15px 0 10px 0;
+}
+
+.column.main .comman-hot-deal .product-items{margin:0 !important;}
+
+.hotdeals-slider-li > div,
+.hotdeals-item-li-inner
+{
+    padding:0 !important;
+    border:1px dashed #dfdfdf;
+    -webkit-transition: all 0.4s ease-in-out;
+       -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+         -o-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+}
+
+.hotdeals-slider-li:hover,
+.hotdeals-item-li-inner:hover
+{
+    box-shadow:0 0 15px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow:0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.comman-hot-deal .product-item-name
+{
+    margin:0 0 10px 0;
+}
+.comman-hot-deal .price-box,
+.comman-hot-deal .product-item .price-box
+{
+    margin:0 0 10px 0;
+    display:block;
+    overflow:hidden;
+}
+.comman-hot-deal .product-item .price-box .price-label
+{
+}
+.comman-hot-deal .price-box > span
+{
+    float:left;
+    padding:0 7px 0 0;
+    margin:0;
+}
+
+.comman-hot-deal .products-grid .product-item-actions{margin:0;padding:10px 0;}
+
+/* owl start */
+/* OWL DOT */
+.hotdeals-slider-block .owl-theme .owl-controls .owl-pagination {
+    margin-top: 10px;
+}
+
+.hotdeals-slider-block .owl-theme .owl-controls .owl-page {
+    margin: 0px;
+    height: 16px;
+    width: 16px;
+    margin: 6px;
+}
+
+.hotdeals-slider-block .owl-theme .owl-controls .owl-page span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0px;
+    filter: Alpha(Opacity=50);
+    opacity: 0.5;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background: #dfdfdf;
+}
+
+.hotdeals-slider-block .owl-theme .owl-controls .owl-page.active span,
+.hotdeals-slider-block .owl-theme .owl-controls .owl-page:hover span
+{
+    background: #fff;
+    border: 2px solid #1979c3;
+}
+
+.hotdeals-slider-block .owl-theme .owl-controls .owl-nav,
+.hotdeals-slider-block .owl-theme .owl-controls .owl-buttons {
+    z-index: 1;
+}
+
+.hotdeals-slider-block .owl-theme .owl-controls .owl-buttons
+{
+    position:absolute;
+    right:15px;
+    top:-70px;
+}
+.hotdeals-slider-block .owl-theme .owl-controls .owl-buttons div{padding:0;}
+
+.hotdeals-slider-block .owl-theme .owl-controls .owl-buttons [class*="owl-"]
+{
+     color:#fff;
+     background-color:#f1f1f1;
+     position:static;
+     transform: none;
+    -webkit-transform:none;
+     color:#a1a1a1;
+    height:32px;
+    width:32px;
+    border-radius:32px;
+    -webkit-border-radius:32px;
+    opacity:1;
+    -khtml-opacity:1;
+    -moz-opacity:1;
+    filter: alpha(opacity=100);
+    margin:0 0 0 10px;
+    transition: all 0.4s ease-in-out 0s;
+    -ms-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+}
+
+.hotdeals-slider-block .owl-theme .owl-controls .owl-buttons [class*="owl-"]:hover{background-color:#1979c3;color:#fff;}
+.hotdeals-slider-block .owl-theme .owl-controls .owl-buttons [class*="owl-"]::after
+{
+    line-height:24px;
+    font-size:24px;
+    line-height:30px;
+    display:block;
+    font-weight:bold;
+    transition: all 0.4s ease-in-out 0s;
+    -ms-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+     content: "\f104";
+    font-family: 'FontAwesome';
+     color: inherit;
+    display: block;
+    text-align: center;
+}
+
+.hotdeals-slider-block .owl-theme .owl-controls .owl-buttons {
+    z-index: 1;
+}
+
+.hotdeals-slider-block .owl-theme .owl-controls .owl-buttons .owl-prev::after {
+    content: "\f104";
+}
+
+.hotdeals-slider-block .owl-theme .owl-controls .owl-buttons .owl-next::after {
+    content: "\f105";
+}
+
+.hotdeals-slider-block .owl-theme .owl-controls .owl-buttons [class*="owl-"]:hover {
+    background-color: #1979c3;
+    color: #fff;
+}
+/* owl end */
+
+/*responsive layout start*/
+@media screen and (max-width:900px)
+{
+.hotdeals-slider-block .countdown-section
+{
+
+}
+}
+
+/* ipad portrait max-width:900 */
+@media screen and (max-width:980px) {
+    .block.widget.hotdeals-product-list .products-grid .product-item.hotdeals-item{
+        width: 33.33%;
+    }
+
+}
+
+/* mobile device landscap max-width:760 */
+@media screen and (max-width:768px) {
+    .block.widget.hotdeals-product-list .products-grid .product-item.hotdeals-item{
+        width: 50%;
+        text-align: center;
+    }
+    .block.widget.hotdeals-product-list .products-grid .product-item.hotdeals-item .product-item-details, .block.widget.hotdeals-slider-block .product-item-info {
+        text-align: left;
+    }
+
+.comman-hot-deal .grid{margin:0 -10px;}
+.block.widget.hotdeals-product-list .products-grid .product-item.hotdeals-item,
+.hotdeals-slider-block .owl-carousel .owl-item{padding:0 10px 10px 10px;}
+
+.block.widget.hotdeals-product-list .products-grid .product-item.hotdeals-item{margin:0 0 10px 0 !important;}
+
+.hotdeals-slider-ul .hotdeals-item .hotdeal-timer{font-size:12px;}
+.hotdeals-slider-block .countdown-section{padding:3px;}
+
+}
+
+@media screen and (max-width:640px)
+{
+.comman-hot-deal .product-item-actions{display:block;}
+.comman-hot-deal .product-item-actions .actions-primary{display:table-cell;}
+.comman-hot-deal .product-item-actions .actions-primary + .actions-secondary{display:table-cell;padding-left:10px;width:50%;}
+
+}
+/* mobile device portrait max-width:568 */
+@media screen and (max-width:479px) {
+    .block.widget.hotdeals-product-list .products-grid .product-item.hotdeals-item{
+        width: 100%;
+    }
+}

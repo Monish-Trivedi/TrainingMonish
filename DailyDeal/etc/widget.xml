@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget_file.xsd">
+    <widget id="hotdeals_slider" class="TrainingMonish\DailyDeal\Block\Widget\Hotdeals" >
+        <label translate="true">Hot Deals : Slider</label>
+        <description translate="true">List of Hot Deals</description>
+        <parameters>
+            <parameter name="title" xsi:type="text"  visible="true">
+                <label translate="true">Slider Title</label>
+                <description translate="true">ex : Hot Deals Slider</description>
+            </parameter>
+            <parameter name="id" xsi:type="text" required="true" visible="true">
+                <label translate="true">Slider ID</label>
+                <description translate="true">ex : hotdeals-slider</description>
+            </parameter>
+            <parameter name="css" xsi:type="text" visible="true">
+                <label translate="true">Slider CSS</label>
+                <description translate="true">ex : hotdeals-slider</description>
+            </parameter>
+            <parameter name="options" xsi:type="text" visible="true">
+                <label translate="true">Owl Carousel Options</label>
+                <description translate="true">ex : {items:4,pagination:true,navigation:true,navigationText : ['',''],autoPlay:true,itemsMobile : [568,1],}</description>
+            </parameter>
+            <parameter name="categories" xsi:type="block" visible="true" required="true" sort_order="10">
+                <label translate="true">Category</label>
+                <block class="Magento\Catalog\Block\Adminhtml\Category\Widget\Chooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Select Category...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="template" xsi:type="select" required="true" visible="true">
+                <label>Template</label>
+                <options>
+                    <option name="grid_slider" value="TrainingMonish_DailyDeal::widget/hotdeals_slider.phtml" selected="true">
+                        <label translate="true">Category Slider Template</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="condition" xsi:type="conditions" visible="true" required="false" sort_order="10"
+                       class="Magento\CatalogWidget\Block\Product\Widget\Conditions">
+                <label translate="true">Conditions</label>
+            </parameter>
+        </parameters>
+    </widget>
+
+    <widget id="hotdeals_products" class="TrainingMonish\DailyDeal\Block\Widget\HotCategory">
+        <label translate="true">Hot Deals : Products List</label>
+        <description translate="true">List of Products having deals</description>
+        <parameters>
+            <parameter name="title" xsi:type="text" required="false" visible="true">
+                <label translate="true">Title</label>
+            </parameter>
+            <parameter name="products_count" xsi:type="text" required="true" visible="true">
+                <label translate="true">Number of Deals to Display</label>
+                <value>10</value>
+            </parameter>
+            <parameter name="id" xsi:type="text" required="true" visible="true">
+                <label translate="true">Block ID</label>
+                <description translate="true">ex : hotdeals-list</description>
+            </parameter>
+            <parameter name="css" xsi:type="text" visible="true">
+                <label translate="true">Block CSS</label>
+                <description translate="true">ex : hotdeals-list</description>
+            </parameter>
+            <parameter name="template" xsi:type="select" required="true" visible="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="TrainingMonish_DailyDeals::widget/hotdeals.phtml" selected="true">
+                        <label translate="true">Hot Deals Template</label>
+                    </option>
+                </options>
+            </parameter>
+
+            <parameter name="categories" xsi:type="block" visible="true" required="true" sort_order="10">
+                <label translate="true">Category</label>
+                <block class="Magento\Catalog\Block\Adminhtml\Category\Widget\Chooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Select Category...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="condition" xsi:type="conditions" visible="true" required="false" sort_order="10"
+                       class="Magento\CatalogWidget\Block\Product\Widget\Conditions">
+                <label translate="true">Conditions</label>
+            </parameter>
+        </parameters>
+
+    </widget>
+</widgets>

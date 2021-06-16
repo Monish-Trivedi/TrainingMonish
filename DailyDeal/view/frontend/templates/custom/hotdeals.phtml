@@ -1,0 +1,12 @@
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$widgetFilter = $objectManager->get('Magento\Widget\Model\Template\Filter');
+
+// $widgetShortcode = '{{widget type="Vsourz\HotDeals\Block\Widget\Hotdeals" title="Hot Deals Slider From Template" id="hotdeals-slider12" css="hotdeals-slider1" options="{items:2,nav:true,dots:false,responsiveRefreshRate:200,responsiveBaseElement:window,responsiveClass:true,responsive:{0:{items:1},568:{items:1},667:{items:2},},}" template="TrainingMonish_DailyDeal::widget/hotdeals_slider.phtml" products_count="10" categories="category/9"}}';
+
+$widgetShortcode = '{{widget type="Vsourz\HotDeals\Block\Widget\Hotdeals" title="Hot Deals Slider From Template" id="hotdeals-slider-template" css="hotdeals-slider from-template" options="{items:2,navigation:true,addClassActive:""active",navigationText : ["",""],itemsMobile : [568,1],}" template="TrainingMonish_DailyDeal::widget/hotdeals_slider.phtml" products_count="10" categories="category/9"}}';
+
+$widget = $widgetFilter->filter($widgetShortcode);
+echo $widget;
+
+?>
