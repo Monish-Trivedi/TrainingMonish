@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package    TrainingMonish_GridForm
+ * @author     monish.trivedi@krishtechnolabs.com
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="trainingmonish_gridform::core" title="GridForm" module="TrainingMonish_GridForm" sortOrder="90" resource="TrainingMonish_GridForm::sample"/>
+        <add id="trainingmonish_gridform::test" title="Items" module="TrainingMonish_GridForm" sortOrder="10" parent="trainingmonish_gridform::core" action="trainingmonish_gridform/items/" resource="TrainingMonish_GridForm::items"/>
+    </menu>
+</config>

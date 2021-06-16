@@ -1,0 +1,88 @@
+<?php
+/**
+ * @package    TrainingMonish_GridForm
+ * @author     monish.trivedi@krishtechnolabs.com
+ */
+?>
+
+<form class="" action="<?php echo $block->getBaseUrl().'gridform/index/save'; ?>" id="trainingmonish-gridform-form" method="post" data-mage-init='{"validation": {}}'>
+    <fieldset class="fieldset">
+        <legend class="legend"><span>Buy Online Books<a href="<?php echo $block->getBaseUrl().'gridform/index/list'; ?>">(Visit List Page)</a></span></legend><br>
+        <div class="field note no-label">(*) Marked fields are compulsory.</div>
+        <div class="field title required">
+            <label class="label" for="title"><span>Title</span></label>
+            <div class="control">
+                <input name="title" id="title" title="Name" value="" class="input-text" type="text" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field author required">
+            <label class="label" for="author"><span>Author</span></label>
+            <div class="control">
+                <input name="author" id="author" title="Author" value="" class="input-text" type="text" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field content required">
+            <label class="label" for="content"><span>Content</span></label>
+            <div class="control">
+                <textarea name="content" id="content" title="Content" class="input-text" cols="5" rows="3" data-validate="{required:true}"></textarea>
+            </div>
+        </div>
+        <div class="field preferred_language required">
+            <label class="label" for="preferred_language"><span>Preferred Language?</span></label>
+            <div class="control">
+                <input type="checkbox" id="english" name="preferred_language[]" value="English">
+                <label for="english"> English</label>
+                <input type="checkbox" id="hindi" name="preferred_language[]" value="Hindi">
+                <label for="hindi"> Hindi </label>
+                <input type="checkbox" id="gujarati" name="preferred_language[]" value="Gujarati">
+                <label for="gujarati"> Gujarati </label>
+            </div>
+        </div>
+        <div class="field country required">
+            <label class="label" for="country">Select Country:</label>
+            <div class="control">
+              <select name="country" id="country" data-validate="{required:true}">
+                <option value="">Select</option>
+                <option value="Australia">Australia</option>
+                <option value="Canada">Canada</option>
+                <option value="Denmark">Denmark</option>
+                <option value="India">India</option>
+              </select>
+            </div>
+        </div>  
+        <div class="field newsletter required">
+            <label class="label" for="newsletter">Want to subscribe for a newsletter?</label>
+              <div class="control">
+                <input type="radio" id="yes" name="newsletter" value="yes" required>
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="newsletter" value="no">
+                <label for="no">No</label>
+              </div>          
+        </div>    
+        <div class="field favcolor required">
+             <label class="label" for="favcolor">Select your favorite color:</label>
+             <div class="control">
+                <input type="color" id="favcolor" name="favcolor" value="#80aaff">
+             </div>
+        </div>
+        <div class="field location required">
+             <label class="label" for="location">Preferred Location:</label>
+             <div class="control">
+                <select name="location[]" id="location" data-validate="{required:true}" multiple>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Mumbai">Mumbai</option>              
+                  <option value="Pune">Pune</option>                                        
+                </select>
+            </div>
+        </div>  
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" title="Submit" class="action submit primary">
+                <span>Submit</span>
+            </button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package    TrainingMonish_GridForm
+ * @author     monish.trivedi@krishtechnolabs.com
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+	    <css src="TrainingMonish_GridForm::css/custom_gridform.css" />
+	    <script src="TrainingMonish_GridForm::js/custom_gridform.js"/>
+	</head>
+    <body>
+        <referenceContainer name="content">
+            <block class="TrainingMonish\GridForm\Block\GridForm" name="gridform.list" template="gridform.phtml">
+            </block>
+        </referenceContainer>
+    </body>
+</page>

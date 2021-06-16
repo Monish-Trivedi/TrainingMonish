@@ -1,0 +1,44 @@
+<?php
+/**
+ * @package    TrainingMonish_GridForm
+ * @author     monish.trivedi@krishtechnolabs.com
+ */
+?>
+<?php $collection = $block->getGridFormCollection(); ?>
+<?php if($collection->count() > 0): ?>
+    <?php if ($block->getPagerHtml()): ?>
+        <div class="order-products-toolbar toolbar bottom"><?php echo $block->getPagerHtml(); ?></div>
+    <?php endif ?>
+    <table class="data table" id="gridform-data-table">
+        <caption class="table-caption">TrainingMonish GridForm Data</caption>
+        <thead>
+            <tr>
+                <th scope="col" class="col title">Title</th>
+                <th scope="col" class="col author">Author</th>
+                <th scope="col" class="col created_at">Created At</th>
+                <th scope="col" class="col actions">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($collection as $key => $data): ?>
+                <tr>
+                    <td data-th="Title" class="col title"><?php echo $data->getTitle(); ?></td>
+                    <td data-th="Author" class="col author"><?php echo $data->getAuthor(); ?></td>
+                    <td data-th="Date" class="col created_at"><?php echo $data->getCreatedAt(); ?></td>
+                    <td data-th="Actions" class="col actions">
+                        <?php $id = ($data->getGridFormId()) ? $data->getGridFormId() : $data['gridform_id']; ?>
+                        <!-- "$data->getTesting13Id()" was not working when I generated Vky_Testing13 module. That's why I had to place above line. -->
+                        <a href="<?php echo $block->getBaseUrl().'gridform/index/view/id/'.$id; ?>" class="action view">
+                            <span>View</span>
+                        </a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <?php if ($block->getPagerHtml()): ?>
+        <div class="order-products-toolbar toolbar bottom"><?php echo $block->getPagerHtml(); ?></div>
+    <?php endif ?>
+<?php else: ?>
+    <h2>We couldn't find any records</h2>
+<?php endif; ?>
