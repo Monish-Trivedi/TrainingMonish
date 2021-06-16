@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="3columns" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- <referenceContainer name="content">
+            <block class="Monish\HelloWorld\Block\Hello" name="helloworld" template="Monish_HelloWorld::hello.phtml" />
+        </referenceContainer> -->
+        <referenceContainer name="sidebar.main">
+            <block class="Magento\Framework\View\Element\Template" name="helloworld.block1" template="Monish_HelloWorld::test1.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="content">
+                <block class="Magento\Framework\View\Element\Template" name="helloworld.block2" template="Monish_HelloWorld::test2.phtml"/>
+        </referenceContainer>
+        <referenceBlock name="wishlist_sidebar" remove="true"/>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceContainer name="sidebar.additional">
+            <container name="fsd" htmlTag="div">
+                <block class="Magento\Framework\View\Element\Template" name="helloworld.block3" template="Monish_HelloWorld::test3.phtml"/>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
